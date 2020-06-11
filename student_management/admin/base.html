@@ -1,0 +1,20 @@
+{% extends "admin/base.html" %}
+{% load theming_tags %}
+{% load staticfiles %}
+{% block blockbots %}
+    {{ block.super }}
+    {# Using blockbots ensures theming css comes after any form media and other css #}
+    {% render_theming_css %}
+    <style type="text/css">
+    #header #branding h1 {
+        background-image: url("bootstrap_admin/img/msj_logo-140x60.png");
+    }
+    </style>
+{% endblock %}
+
+{% block branding %}
+<a href="{% url 'admin:index' %}" class="django-admin-logo">
+    <!-- Django Administration -->
+    <img src="{% static "bootstrap_admin/img/msj_logo-140x60.png" %}" alt="{{ site_header|default:_('Django Admin') }}">
+</a>
+{% endblock branding %}
