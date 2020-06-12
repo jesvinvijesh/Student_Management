@@ -11,11 +11,11 @@
 
             {% load static %}
 <body data-media-url="{% get_media_prefix %}">
-               <img src="{{MEDIA_URL}}/{{product.student_image_url}}" width='150' height = '150' >
+               <img src="{{MEDIA_URL}}/{{product.upload_student_image}}" width='150' height = '150' >
             <div class="card-body">
                 <h3 class="card-title">{{product.first_name}}</h3>
                 <p class="card-text"><b>{{product.inst_student_id}}</b><br>Parents name:</b> <b>
-                    {{product.parent_name1}}</b><br>Ph:<b>{{product.contact_number1}}</b>
+                    {{product.parent_name1}}</b><br>Ph:<b>{{product.phone}}</b>
                     <br>Joined on:<b>{{product.joining_date}}</b><br>email
                     :<b>{{product.email_id}}</b></p>
 <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->

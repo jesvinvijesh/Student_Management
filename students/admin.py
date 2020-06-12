@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django import forms
+from django.forms.widgets import CheckboxSelectMultiple
 from .models import course, attendance, student, enrollment
 
 
@@ -32,7 +34,7 @@ class CourseAdmin(admin.ModelAdmin):
 @admin.register(enrollment)
 class EnrollmentAdmin(admin.ModelAdmin):
     list_display = ('course', 'student')
-    list_filter = ('student',)
+    search_fields = ['student__first_name']
 
     def get_actions(self, request):
         actions = super().get_actions(request)
@@ -44,7 +46,8 @@ class EnrollmentAdmin(admin.ModelAdmin):
 @admin.register(attendance)
 class AttendanceAdmin(admin.ModelAdmin):
     list_display = ('student', 'course', 'date', 'presence')
-    list_filter = ('date', 'student')
+    list_filter = ('date', )
+    search_fields = ['student__first_name']
 
     def get_actions(self, request):
         actions = super().get_actions(request)
