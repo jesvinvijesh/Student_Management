@@ -27,8 +27,10 @@ class student(models.Model):
     gender = models.TextField(choices=GENDER_STATUS, default='', blank=True, null=True)
 
 
+
     def __str__(self):
         return self.first_name
+
 
 class course(models.Model):
     course_name = models.CharField(max_length=500)
