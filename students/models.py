@@ -22,7 +22,7 @@ class student(models.Model):
     contact_number2 = models.CharField(max_length=14)
     joining_date = models.DateField()
     email_id = models.CharField(max_length=360)
-    student_image_url = models.ImageField(null=True, blank=True, upload_to="student_student_image_url/")
+    upload_student_image = models.ImageField(null=True, blank=True, upload_to="student_student_image_url/")
     grade_while_joining = models.CharField(max_length=50)
     gender = models.TextField(choices=GENDER_STATUS, default='', blank=True, null=True)
 
