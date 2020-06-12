@@ -26,6 +26,3 @@ urlpatterns = [
                   path('students/', include('students.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
-# admin.site.site_header = "MSJ Researchers World"
-# admin.site.site_title = "MSJ Researchers World"
-# admin.site.index_title = "Student Management Portal"
