@@ -13,14 +13,14 @@ GENDER_STATUS = (
 
 
 class student(models.Model):
-    inst_student_id = models.CharField(max_length=10)
+    student_id = models.CharField(max_length=10)
     first_name = models.CharField(max_length=80)
-    last_name = models.CharField(max_length=80,blank=True)
+    last_name = models.CharField(max_length=80, blank=True)
     dob = models.DateField()
     parent_name1 = models.CharField(max_length=80)
     parent_name2 = models.CharField(max_length=80)
     phone = models.CharField(max_length=14)
-    contact_number2 = models.CharField(max_length=14,blank=True)
+    contact_number2 = models.CharField(max_length=14, blank=True)
     joining_date = models.DateField()
     email_id = models.CharField(max_length=360)
     upload_student_image = models.ImageField(upload_to="student_student_image_url/")
@@ -35,6 +35,10 @@ class student(models.Model):
             return mark_safe('<img src="/media/%s" width="70" height="70" />' % (self.upload_student_image))
         else:
             return mark_safe('<img src="/media/document/default.jpg" width="50" height="50" />')
+
+    @property
+    def name(self):
+        return self.first_name + ' ' + self.last_name
 
 
 class course(models.Model):
