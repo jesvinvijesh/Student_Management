@@ -30,6 +30,12 @@ class student(models.Model):
     def __str__(self):
         return self.first_name
 
+    def image_tag(self):
+        if self.upload_student_image:
+            return mark_safe('<img src="/media/%s" width="50" height="50" />' % (self.upload_student_image))
+        else:
+            return mark_safe('<img src="/media/document/default.jpg" width="50" height="50" />')
+
 
 class course(models.Model):
     course_name = models.CharField(max_length=500)

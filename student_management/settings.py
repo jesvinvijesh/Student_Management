@@ -117,10 +117,23 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
-MEDIA_ROOT = 'student_student_image_url'
-MEDIA_URL = '/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'student_student_image_url')
+
+# STATIC_URL = '/static/'
+#
+# MEDIA_ROOT = 'student_student_image_url'
+# MEDIA_URL = '/'
 
 
