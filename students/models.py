@@ -49,6 +49,7 @@ class course(models.Model):
         return self.course_name
 
 
+
 class attendance(models.Model):
     student = models.ForeignKey(student, on_delete=models.CASCADE)
     course = models.ForeignKey(course, on_delete=models.CASCADE)

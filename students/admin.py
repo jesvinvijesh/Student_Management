@@ -41,6 +41,7 @@ class EnrollmentAdmin(admin.ModelAdmin):
         return actions
 
 
+
 @admin.register(attendance)
 class AttendanceAdmin(admin.ModelAdmin):
     list_display = ('student', 'course', 'date', 'presence')
