@@ -7,7 +7,7 @@ from .models import course, attendance, student, enrollment
 @admin.register(student)
 class StudentAdmin(admin.ModelAdmin):
     search_fields = ['first_name', 'last_name']
-    list_display = ('inst_student_id', 'first_name', 'last_name', 'phone',)
+    list_display = ('upload_student_image', 'inst_student_id', 'first_name', 'last_name', 'phone',)
     list_filter = ('joining_date',)
     list_display_links = ['inst_student_id', ]
     list_editable = ('phone',)
