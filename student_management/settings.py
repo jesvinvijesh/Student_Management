@@ -29,7 +29,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'student_management.apps.SuitConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -128,3 +127,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'student_student_image_url')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
