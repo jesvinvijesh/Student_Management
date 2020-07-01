@@ -48,8 +48,6 @@ class course(models.Model):
     def __str__(self):
         return self.course_name
 
-
-
 class attendance(models.Model):
     student = models.ForeignKey(student, on_delete=models.CASCADE)
     course = models.ForeignKey(course, on_delete=models.CASCADE)
@@ -78,3 +76,6 @@ class enrollment(models.Model):
         choices=STATUS_CHOICES,
         default=enrolled,
     )
+
+
+
