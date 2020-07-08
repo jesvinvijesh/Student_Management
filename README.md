@@ -1,4 +1,4 @@
-###To use this project follow the instructions below:                                                                                                                                   
+To use this project follow the instructions below:                                                                                                                                   
 1. Download the project extract and open the directory with Pycharm                                                                                                                     
 2. Run:                                                                                                                                                                            
    1.pip install django                                                                                                                                                             
